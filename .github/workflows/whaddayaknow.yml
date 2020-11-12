@@ -1,0 +1,17 @@
+name: Run Tests
+  on: push
+
+  jobs:
+    runs-on: ubuntu-latest
+
+    install:
+      run: |
+        pip install pip --upgrade
+        pip install -r requirements.txt
+
+    test:
+      needs: install
+      run:
+        python source/test.py
+
+
