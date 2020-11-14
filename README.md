@@ -10,9 +10,11 @@ Quiz App for Discord
 
 ## Project Structure
 
+```
 - BASE_DIR
   |- source
   |- resources
+```
 
 The `BASE_DIR` contains 
 In `source` only python code is allowed.

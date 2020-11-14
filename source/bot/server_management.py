@@ -49,4 +49,4 @@ class ServerManagement:
         for r in await self._guild.fetch_roles():
             if r.name == name:
                 return r
-        return await self._guild.create_role(name, color)
+        return await self.create_role(name, color)

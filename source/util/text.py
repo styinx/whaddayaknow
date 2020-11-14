@@ -11,31 +11,33 @@ def text_id():
     return ID
 
 
-CHANNEL_ORGA = text_id()
+CHANNEL_CATEGORY = text_id()
 CHANNEL_SETUP = text_id()
 CHANNEL_LOBBY = text_id()
 
 NEW_QUIZ = text_id()
-
+QUIZ_MASTER = text_id()
 
 TEXTS = {
     'de': {
-        CHANNEL_ORGA: 'Organisation',
         NEW_QUIZ: str(
             'Ein neues "{}" Quiz wurde gestarted. Bitte reagiere mit dem :+1: emoji um teilzunehmen.\n'
+            'Um einem Team beizutreten reagiere mit der Nummer des Teams (:one:-:eight:).\n'
             '__**Teilnehmer:**__\n'
             '{}'
         )
     },
     'en': {
-        CHANNEL_ORGA: 'Organization',
-        CHANNEL_SETUP: 'setup',
-        CHANNEL_LOBBY: 'lobby',
-        NEW_QUIZ: str(
+        CHANNEL_CATEGORY: 'Quiz',
+        CHANNEL_SETUP:    'setup',
+        CHANNEL_LOBBY:    'lobby',
+        NEW_QUIZ:         str(
             'A new "{}" quiz was started. Please react with the :+1: emoji to participate. \n'
+            'To join a team react with the number of the team (:one:-:eight:).\n'
             '__**Participants:**__\n'
             '{}'
         ),
+        QUIZ_MASTER:      'Quiz Master'
     },
 }
 
@@ -51,24 +53,42 @@ def idfy(t: str):
 
 
 def i(t: str):
+    """
+    italic
+    """
     return '*{0}*'.format(t)
 
 
 def b(t: str):
+    """
+    bold
+    """
     return '**{0}**'.format(t)
 
 
 def u(t: str):
+    """
+    underlined
+    """
     return '__{0}__'.format(t)
 
 
 def s(t: str):
+    """
+    strikethrough
+    """
     return '~~{0}~~'.format(t)
 
 
 def c(t: str):
+    """
+    code
+    """
     return '`{0}`'.format(t)
 
 
 def cb(t: str):
+    """
+    codeblock
+    """
     return '```{0}```'.format(t)
